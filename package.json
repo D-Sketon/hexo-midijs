@@ -1,0 +1,19 @@
+{
+  "name": "hexo-midijs",
+  "version": "1.0.2",
+  "description": "A hexo plugin to play midi files by MIDIjs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hexo",
+    "plugin",
+    "midi"
+  ],
+  "author": "d-sketon",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
