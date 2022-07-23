@@ -16,7 +16,7 @@ $ npm install hexo-midijs --save
 
 ```
 {% midijs './Smoking Dragon.mid' '400px' %}
-{% midijs %}
+{% endmidijs %}
 ```
 The first parameter represents the url of the MIDI file (required)
 
