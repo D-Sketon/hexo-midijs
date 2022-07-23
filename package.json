@@ -1,6 +1,6 @@
 {
   "name": "hexo-midijs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A hexo plugin to play midi files by MIDIjs.",
   "main": "index.js",
   "scripts": {

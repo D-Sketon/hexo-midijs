@@ -16,8 +16,12 @@ $ npm install hexo-midijs --save
 
 ```
 {% midijs './Smoking Dragon.mid' '400px' %}
-{% endmidijs %}
+{% midijs %}
 ```
 The first parameter represents the url of the MIDI file (required)
 
 The second parameter represents the width of the player (optional,default 85%)
+
+## Example
+
+![example](https://cdn.jsdelivr.net/gh/D-Sketon/blog-img/midijs.png)
