@@ -24,4 +24,4 @@ The second parameter represents the width of the player (optional,default 85%)
 
 ## Example
 
-![example](https://cdn.jsdelivr.net/gh/D-Sketon/blog-img/midijs.png)
+[Demo](https://d-sketon.github.io/hexo-midijs/2022/12/30/MIDI%E9%85%8D%E5%B8%83/)
