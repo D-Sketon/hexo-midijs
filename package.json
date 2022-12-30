@@ -1,27 +1,26 @@
 {
-  "name": "hexo-midijs",
-  "version": "1.0.6",
+  "author": {
+    "name": "d-sketon"
+  },
+  "bugs": {
+    "url": "https://github.com/D-Sketon/hexo-midijs/issues"
+  },
   "description": "A hexo plugin to play midi files by MIDIjs.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/D-Sketon/hexo-midijs.git"
-  },
+  "homepage": "https://github.com/D-Sketon/hexo-midijs#readme",
   "keywords": [
     "hexo",
     "plugin",
     "midi"
   ],
-  "bugs": {
-    "url": "https://github.com/D-Sketon/hexo-midijs/issues"
-  },
-  "homepage": "https://github.com/D-Sketon/hexo-midijs#readme",
-  "author": "d-sketon",
   "license": "MIT",
-  "dependencies": {
-    "underscore": "^1.8.3"
-  }
+  "main": "index.js",
+  "name": "hexo-midijs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-Sketon/hexo-midijs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.6"
 }

@@ -1,40 +1,32 @@
-var fs = require('fs'),
-    path = require('path'),
-    _ = require('underscore');
+'use strict';
 
-var filePath = path.join(__dirname, 'template.html');
+const fs = require('fs')
+const path = require('path')
+const css = hexo.extend.helper.get('css').bind(hexo)
+const js = hexo.extend.helper.get('js').bind(hexo)
+const midijs = require('./lib/midijs.js')
 
-function midijs(args) {
-    var template = fs.readFileSync(filePath).toString();
+hexo.extend.generator.register('midijs_button', () => [{
+    path: 'source/midijs_button.png',
+    data: () => fs.createReadStream(path.resolve(__dirname, "./source", "midijs_button.png"))
+}]);
 
-    return _.template(template)({
-        id: 'midijs' + ((Math.random() * 9999) | 0),
-        url: args[0],
-        width: args[1] || '85%'
-    });
-}
+hexo.extend.generator.register('midijs_css', () => [{
+    path: 'source/midijs.css',
+    data: () => fs.createReadStream(path.resolve(__dirname, "./source", "midijs.css"))
+}]);
 
-hexo.extend.generator.register('midijs_button', ()=>[
-    {
-      path: 'static/midijs_button.png',
-      data: function(){
-        return fs.createReadStream(
-          path.resolve(path.resolve(__dirname, "./static"),"midijs_button.png"))
-      }
-    }
-]);
-
-hexo.extend.generator.register('midijs_css', ()=>[
-    {
-      path: 'static/midijs.css',
-      data: function(){
-        return fs.createReadStream(
-          path.resolve(path.resolve(__dirname, "./static"),"midijs.css"))
-      }
-    }
-]);
-
-hexo.extend.tag.register('midijs', midijs, {
+hexo.extend.tag.register('midijs', (args) => {
+    return midijs(args);
+}, {
     async: true,
     ends: true
 });
+
+hexo.extend.injector.register('head_begin', () => {
+    return css('/source/midijs.css');
+}, 'post')
+
+hexo.extend.injector.register('head_begin', () => {
+    return js('https://www.midijs.net/lib/midi.js');
+}, 'post')
