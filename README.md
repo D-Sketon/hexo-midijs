@@ -1,4 +1,6 @@
 # hexo-midijs
+![](https://img.shields.io/npm/v/hexo-midijs)   ![](https://img.shields.io/npm/dt/hexo-midijs)
+
 A hexo plugin to play MIDI files by MIDIjs.
 
 About midijs http://www.midijs.net/
