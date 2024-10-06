@@ -36,6 +36,15 @@ describe("template", () => {
       startTimemidijs1234.innerHTML = sec2min(event.time);
       ballmidijs1234.style.left = event.time / durationSecondmidijs1234 * document.getElementById("linemidijs1234").offsetWidth - 7.5 + 'px';
     }
+    if (event.time >= durationSecondmidijs1234) {
+      ballmidijs1234.style.left = "-7.5px";
+      startTimemidijs1234.innerHTML = "00:00";
+      playmidijs1234.className = "midibutton midiplay";
+      isFirstmidijs1234 = true;
+      isPlaymidijs1234 = false;
+      currentSecondmidijs1234 = -1;
+      currentPlayId = "";
+    }
   }
   var isWork = MIDIjs.get_audio_status().match(/WebAudio/);
   var urlmidijs1234 = 'url';
