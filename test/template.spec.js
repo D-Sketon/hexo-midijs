@@ -12,14 +12,16 @@ describe("template", () => {
       args,
     });
     expect(result).toEqual(`
-<div style="min-height: 32px;display: flex;justify-content: center;align-items: center;width:85%">
-  <div id="stopmidijs1234" class="midibutton midistop"></div>
-  <div id="playmidijs1234" class="midibutton midiplay"></div>
-  <div class="miditime" id="startTimemidijs1234">00:00</div>
-  <div id="linemidijs1234" class="midiline">
-    <div id="ballmidijs1234" class="midiball"></div>
+<div style="display: flex;justify-content: center;align-items: center;width:100%;margin: 20px 0;">
+  <div style="min-height: 32px;display: flex;justify-content: center;align-items: center;width:85%">
+    <div id="stopmidijs1234" class="midibutton midistop"></div>
+    <div id="playmidijs1234" class="midibutton midiplay"></div>
+    <div class="miditime" id="startTimemidijs1234">00:00</div>
+    <div id="linemidijs1234" class="midiline">
+      <div id="ballmidijs1234" class="midiball"></div>
+    </div>
+    <div class="miditime" id="durationmidijs1234">00:00</div>
   </div>
-  <div class="miditime" id="durationmidijs1234">00:00</div>
 </div>
 <script type='text/javascript' src="https://www.midijs.net/lib/midi.js" arg1></script>
 <script arg1>
