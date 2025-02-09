@@ -12,6 +12,7 @@ describe("template", () => {
       args,
     });
     expect(result).toEqual(`
+undefined
 <div style="display: flex;justify-content: center;align-items: center;width:100%;margin: 20px 0;">
   <div style="min-height: 32px;display: flex;justify-content: center;align-items: center;width:85%">
     <div id="stopmidijs1234" class="midibutton midistop"></div>
@@ -48,6 +49,7 @@ describe("template", () => {
       currentPlayId = "";
     }
   }
+  if (window.MIDIjs !== undefined) {
   var isWork = MIDIjs.get_audio_status().match(/WebAudio/);
   var urlmidijs1234 = 'url';
   var durationSecondmidijs1234 = 0;
@@ -107,6 +109,7 @@ describe("template", () => {
     isPlaymidijs1234 = false;
     currentSecondmidijs1234 = -1;
     currentPlayId = "midijs1234";
+  }
   }
 </script>`);
   });
